@@ -34,7 +34,8 @@ if take_picture:
     cv2.imwrite('Images/image_atoms.jpg', image)
 
 if classify:
-    img = cv2.imread('app/dashboard/Images/image_atoms.jpg')
+    #img = cv2.imread('app/dashboard/Images/image_atoms.jpg')
+    img = cv2.imread('image_atoms.jpg')
     st.write(os.listdir())
     #os.chdir('app/dashboard')
     #st.write(os.getcwd())
