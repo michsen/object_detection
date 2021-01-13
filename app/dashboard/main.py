@@ -14,7 +14,7 @@ max_size = st.slider('Max Size', min_value=1, max_value=500, value=150)
 
 run = st.sidebar.checkbox('Live', value=False)
 FRAME_WINDOW = st.image([])
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(-1)
 take_picture = st.sidebar.button('Take a picture')
 classify = st.sidebar.checkbox('Classify')
 
@@ -31,15 +31,11 @@ if take_picture:
     rect_img = frame[upper_left[1] : bottom_right[1], upper_left[0] : bottom_right[0]]
 
     image = rect_img
-    cv2.imwrite('Images/image_atoms.jpg', image)
+    cv2.imwrite('./Images/image_atoms.jpg', image)
 
 if classify:
-    #img = cv2.imread('app/dashboard/Images/image_atoms.jpg')
     img = cv2.imread('./Images/image_atoms.jpg')
     st.write(os.listdir())
-    #os.chdir('app/dashboard')
-    #st.write(os.getcwd())
-    st.write(img)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     c_atoms = c_cascade.detectMultiScale(gray, scale, no_neighbors, minSize=(min_size,min_size), maxSize=(max_size,max_size)) 
     h_atoms = h_cascade.detectMultiScale(gray, scale, no_neighbors, minSize=(min_size,min_size), maxSize=(max_size,max_size)) 
