@@ -1,0 +1,13 @@
+/data
+/image_creation
+/image_preparation
+/opencv_workspace
+/training_classifier
+Atom-Detection.ipynb
+cascade_c_hw.xml
+cascade_c_pc.xml
+cascade_h_hw.xml
+cascade_h_pc.xml
+!/app/cascade_c_hw.xml
+!/app/cascade_h_hw.xml
+.ipynb_checkpoints
