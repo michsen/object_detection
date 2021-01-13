@@ -35,6 +35,7 @@ if take_picture:
 
 if classify:
     img = cv2.imread('Images/image_atoms.jpg')
+    st.write(os.getcwd())
     st.write(img)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     c_atoms = c_cascade.detectMultiScale(gray, scale, no_neighbors, minSize=(min_size,min_size), maxSize=(max_size,max_size)) 
