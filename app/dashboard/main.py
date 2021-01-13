@@ -35,7 +35,7 @@ if take_picture:
 
 if classify:
     #img = cv2.imread('app/dashboard/Images/image_atoms.jpg')
-    img = cv2.imread('image_atoms.jpg')
+    img = cv2.imread('./Images/image_atoms.jpg')
     st.write(os.listdir())
     #os.chdir('app/dashboard')
     #st.write(os.getcwd())
