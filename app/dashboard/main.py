@@ -5,7 +5,7 @@ import streamlit as st
 c_cascade = cv2.CascadeClassifier('../cascade_c_hw.xml')
 h_cascade = cv2.CascadeClassifier('../cascade_h_hw.xml')
 
-st.title("Atom Detection")
+st.title("Reza's Object Detection")
 
 scale = st.slider('Scale', min_value=1.01, max_value=20.0, value=1.2)
 no_neighbors = st.slider('No Neighbors', min_value=1, max_value=200, value=10)
@@ -34,7 +34,7 @@ if take_picture:
     cv2.imwrite('Images/image_atoms.jpg', image)
 
 if classify:
-    img = cv2.imread('/app/dashboard/Images/image_atoms.jpg')
+    img = cv2.imread('app/dashboard/Images/image_atoms.jpg')
     st.write(os.listdir())
     os.chdir('app/dashboard')
     st.write(os.getcwd())
