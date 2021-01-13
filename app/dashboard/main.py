@@ -34,6 +34,9 @@ if take_picture:
     cv2.imwrite('./app/dashboard/Images/image_atoms.jpg', image)
 
 if classify:
+    st.write(os.listdir('./app'))
+    st.write(os.listdir('./app/dashboard'))
+    st.write(os.listdir('./app/dashboard/Images'))
     img = cv2.imread('./app/dashboard/Images/image_atoms.jpg')
     st.write(os.listdir())
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
