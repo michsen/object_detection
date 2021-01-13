@@ -31,10 +31,10 @@ if take_picture:
     rect_img = frame[upper_left[1] : bottom_right[1], upper_left[0] : bottom_right[0]]
 
     image = rect_img
-    cv2.imwrite('./Images/image_atoms.jpg', image)
+    cv2.imwrite('./app/dashboard/Images/image_atoms.jpg', image)
 
 if classify:
-    img = cv2.imread('./Images/image_atoms.jpg')
+    img = cv2.imread('./app/dashboard/Images/image_atoms.jpg')
     st.write(os.listdir())
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     c_atoms = c_cascade.detectMultiScale(gray, scale, no_neighbors, minSize=(min_size,min_size), maxSize=(max_size,max_size)) 
