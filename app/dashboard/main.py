@@ -34,7 +34,7 @@ if take_picture:
     cv2.imwrite('Images/image_atoms.jpg', image)
 
 if classify:
-    img = cv2.imread('Images/image_atoms.jpg')
+    img = cv2.imread('/app/dashboard/Images/image_atoms.jpg')
     st.write(os.getcwd())
     st.write(img)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
