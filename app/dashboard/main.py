@@ -2,8 +2,8 @@ import os
 import cv2
 import streamlit as st
 
-c_cascade = cv2.CascadeClassifier('../cascade_c_hw.xml')
-h_cascade = cv2.CascadeClassifier('../cascade_h_hw.xml')
+c_cascade = cv2.CascadeClassifier('./app/cascade_c_hw.xml')
+h_cascade = cv2.CascadeClassifier('./app/cascade_h_hw.xml')
 
 st.title("Reza's Object Detection")
 
